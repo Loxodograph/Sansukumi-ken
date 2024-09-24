@@ -34,9 +34,11 @@ p{
 
 .btn {
   width: 12rem;
+  height: 3rem;
   border-radius: 5px;
   background-color: blanchedalmond;
   font-weight: bold;
+  font-size: larger;
 }
 
 .btn-image {
@@ -53,6 +55,7 @@ img {
 
 button {
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .results {
@@ -61,4 +64,10 @@ button {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+#reset {
+  margin-top: 3rem;
+  font-size: larger;
+  display: none;
 }

@@ -1,6 +1,7 @@
 let slug = document.getElementById("slug");
 let snake = document.getElementById("snake");
 let frog = document.getElementById("frog");
+let reset = document.getElementById("reset")
 let playerScoreCard = document.getElementById("player-score");
 let opponentScoreCard = document.getElementById("opponent-score");
 let playerScore = 0;
@@ -10,6 +11,18 @@ let opponentChoice = "";
 let result = document.getElementById("result");
 let btn = document.getElementsByClassName("btn");
 
+//reset button programming
+
+reset.addEventListener("click", () => {
+  playerScore = 0;
+  opponentScore = 0;
+  playerScoreCard.innerText = playerScore;
+  opponentScoreCard.innerText = opponentScore;
+  frog.style.display = "block";
+  slug.style.display = "block";
+  snake.style.display = "block";
+  playRound();
+})
 // Player chooses animal
 slug.addEventListener("click", () =>{
   opponentChoice = getOpponentChoice(); 
@@ -39,7 +52,10 @@ function getOpponentChoice() {
 }
 
 function playRound(playersChosenAnimal, opponentsChosenAnimal) {
+  //reset button hides
+  reset.style.display = "none";
   //Slug beats Snake
+  
   if (playersChosenAnimal === "Slug" && opponentsChosenAnimal === "Snake") {
       result.innerText = `You win! Slug eats Snake`;
       playerScore++;
@@ -61,13 +77,23 @@ function playRound(playersChosenAnimal, opponentsChosenAnimal) {
       opponentScore++;
       opponentScoreCard.innerText = opponentScore;
   }
-  
+  gameOver();
 }
 
 function gameOver(){
   if (opponentScore === 5) {
     result.innerText = "Game Over! You Lose"
+    frog.style.display = "none";
+    slug.style.display = "none";
+    snake.style.display = "none";
+    reset.style.display = "block";
+   
   } else if (playerScore === 5) {
     result.innerText = "You win!"
+    frog.style.display = "none";
+    slug.style.display = "none";
+    snake.style.display = "none";
+    reset.style.display = "block";
+    
   }
 }
