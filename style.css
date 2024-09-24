@@ -12,15 +12,17 @@
 .scorecard {
   display: flex;
   justify-content: space-between;
-  padding-left: 20rem;
-  padding-right: 20rem;
+  padding-left: 30%;
+  padding-right: 30%;
 }
+
 .left-column, .right-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 p{
   font-size: 1.5rem;
   font-weight: 600;
@@ -51,4 +53,12 @@ img {
 
 button {
   cursor: pointer;
+}
+
+.results {
+  font-size: larger;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
