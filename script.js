@@ -43,11 +43,13 @@ function playRound(playersChosenAnimal, opponentsChosenAnimal) {
   if (playersChosenAnimal === "Slug" && opponentsChosenAnimal === "Snake") {
       result.innerText = `You win! Slug eats Snake`;
       playerScore++;
-      playerScoreCard.innerText = playerScore;s
+      playerScoreCard.innerText = playerScore;
+  //frog beats slug   
     } else if (playersChosenAnimal === "Frog" && opponentsChosenAnimal === "Slug") {
       result.innerText = "You win! Frog eats Slug.";
       playerScore++;
       playerScoreCard.innerText = playerScore;
+  //snake beats frog
     } else if (playersChosenAnimal ==="Snake" && opponentsChosenAnimal === "Frog") {
       result.innerText = "You Win! Snake eats Frog!";
       playerScore++;
@@ -59,10 +61,13 @@ function playRound(playersChosenAnimal, opponentsChosenAnimal) {
       opponentScore++;
       opponentScoreCard.innerText = opponentScore;
   }
+  
+}
+
+function gameOver(){
   if (opponentScore === 5) {
     result.innerText = "Game Over! You Lose"
   } else if (playerScore === 5) {
     result.innerText = "You win!"
   }
-  
 }
