@@ -1,0 +1,54 @@
+* {
+  background-color: palegoldenrod;
+  font-family: "Hina Mincho", serif;;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.scorecard {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+p{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-around
+}
+
+.btn {
+  width: 12rem;
+  border-radius: 5px;
+  background-color: blanchedalmond;
+  font-weight: bold;
+}
+
+.btn-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: baseline;
+}
+
+img {
+  width: 12rem;
+  height: 24rem;
+}
+
+button {
+  cursor: pointer;
+}
